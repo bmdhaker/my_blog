@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: blog2
+  username: postgres
+  password: postgres
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: blog2_test
+  username: postgres
+  password: postgres
+  host: localhost

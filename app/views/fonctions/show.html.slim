@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Libfonction:
+  = @fonction.libfonction
+
+= link_to 'Edit', edit_fonction_path(@fonction)
+'|
+= link_to 'Back', fonctions_path

@@ -1,0 +1,21 @@
+h1 Listing personnes
+
+table
+  tr
+    th Nom
+    th Fonction
+    th
+    th
+    th
+
+  - @personnes.each do |personne|
+    tr
+      td = personne.nom
+      td = personne.fonction
+      td = link_to 'Show', personne
+      td = link_to 'Edit', edit_personne_path(personne)
+      td = link_to 'Destroy', personne, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Personne', new_personne_path

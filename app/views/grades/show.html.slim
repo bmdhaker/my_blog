@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Libgrade:
+  = @grade.libgrade
+p
+  strong Catgrade:
+  = @grade.catgrade
+
+= link_to 'Edit', edit_grade_path(@grade)
+'|
+= link_to 'Back', grades_path

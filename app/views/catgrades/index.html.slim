@@ -1,0 +1,19 @@
+h1 Listing catgrades
+
+table
+  tr
+    th Libcatgrade
+    th
+    th
+    th
+
+  - @catgrades.each do |catgrade|
+    tr
+      td = catgrade.libcatgrade
+      td = link_to 'Show', catgrade
+      td = link_to 'Edit', edit_catgrade_path(catgrade)
+      td = link_to 'Destroy', catgrade, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Catgrade', new_catgrade_path

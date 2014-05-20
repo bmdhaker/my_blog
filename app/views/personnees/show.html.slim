@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @personnee.name
+p
+  strong Fonctionn:
+  = @personnee.fonctionn
+
+= link_to 'Edit', edit_personnee_path(@personnee)
+'|
+= link_to 'Back', personnees_path

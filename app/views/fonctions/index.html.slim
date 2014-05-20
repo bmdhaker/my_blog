@@ -1,0 +1,19 @@
+h1 Listing fonctions
+
+table
+  tr
+    th Libfonction
+    th
+    th
+    th
+
+  - @fonctions.each do |fonction|
+    tr
+      td = fonction.libfonction
+      td = link_to 'Show', fonction
+      td = link_to 'Edit', edit_fonction_path(fonction)
+      td = link_to 'Destroy', fonction, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Fonction', new_fonction_path

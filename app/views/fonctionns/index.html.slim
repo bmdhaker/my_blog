@@ -1,0 +1,19 @@
+h1 Listing fonctionns
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @fonctionns.each do |fonctionn|
+    tr
+      td = fonctionn.name
+      td = link_to 'Show', fonctionn
+      td = link_to 'Edit', edit_fonctionn_path(fonctionn)
+      td = link_to 'Destroy', fonctionn, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Fonctionn', new_fonctionn_path

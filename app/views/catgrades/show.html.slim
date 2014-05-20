@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Libcatgrade:
+  = @catgrade.libcatgrade
+
+= link_to 'Edit', edit_catgrade_path(@catgrade)
+'|
+= link_to 'Back', catgrades_path

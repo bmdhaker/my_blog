@@ -1,0 +1,15 @@
+= form_for @personnee do |f|
+  - if @personnee.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@personnee.errors.count, "error")} prohibited this personnee from being saved:"
+      ul
+        - @personnee.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :fonctionn
+    = f.text_field :fonctionn
+  .actions = f.submit 'Save'
