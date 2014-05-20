@@ -1,0 +1,19 @@
+h1 Listing brevets
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @brevets.each do |brevet|
+    tr
+      td = brevet.name
+      td = link_to 'Show', brevet
+      td = link_to 'Edit', edit_brevet_path(brevet)
+      td = link_to 'Destroy', brevet, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Brevet', new_brevet_path

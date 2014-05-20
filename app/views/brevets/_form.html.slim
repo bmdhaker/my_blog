@@ -1,0 +1,12 @@
+= form_for @brevet do |f|
+  - if @brevet.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@brevet.errors.count, "error")} prohibited this brevet from being saved:"
+      ul
+        - @brevet.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions = f.submit 'Save'

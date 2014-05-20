@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Per:
+  = @joint.per_id
+p
+  strong Brevet:
+  = @joint.brevet_id
+p
+  strong Appointment date:
+  = @joint.appointment_date
+p
+  strong Name:
+  = @joint.name
+
+= link_to 'Edit', edit_joint_path(@joint)
+'|
+= link_to 'Back', joints_path

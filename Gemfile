@@ -7,6 +7,7 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'devise'
 gem 'cancan'
 gem 'slim-rails'
+gem 'protected_attributes'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -1,0 +1,21 @@
+= form_for @joint do |f|
+  - if @joint.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@joint.errors.count, "error")} prohibited this joint from being saved:"
+      ul
+        - @joint.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :per_id
+    = f.number_field :per_id
+  .field
+    = f.label :brevet_id
+    = f.number_field :brevet_id
+  .field
+    = f.label :appointment_date
+    = f.datetime_select :appointment_date
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions = f.submit 'Save'

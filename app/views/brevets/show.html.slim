@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @brevet.name
+
+= link_to 'Edit', edit_brevet_path(@brevet)
+'|
+= link_to 'Back', brevets_path

@@ -1,0 +1,2 @@
+module BrevetsHelper
+end

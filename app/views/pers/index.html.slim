@@ -1,0 +1,19 @@
+h1 Listing pers
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @pers.each do |per|
+    tr
+      td = per.name
+      td = link_to 'Show', per
+      td = link_to 'Edit', edit_per_path(per)
+      td = link_to 'Destroy', per, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Per', new_per_path

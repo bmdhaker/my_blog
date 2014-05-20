@@ -1,0 +1,25 @@
+h1 Listing joints
+
+table
+  tr
+    th Per
+    th Brevet
+    th Appointment date
+    th Name
+    th
+    th
+    th
+
+  - @joints.each do |joint|
+    tr
+      td = joint.per_id
+      td = joint.brevet_id
+      td = joint.appointment_date
+      td = joint.name
+      td = link_to 'Show', joint
+      td = link_to 'Edit', edit_joint_path(joint)
+      td = link_to 'Destroy', joint, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Joint', new_joint_path

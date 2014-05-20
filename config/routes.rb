@@ -1,5 +1,19 @@
 BlogAdmin::Application.routes.draw do
 
+  resources :joint2s
+
+  resources :joints
+
+  resources :brevets
+
+  resources :pers
+
+  resources :appointments
+
+  resources :patients
+
+  resources :physicians
+
   resources :personnees
 
   resources :fonctionns

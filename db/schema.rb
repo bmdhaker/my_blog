@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519154359) do
+ActiveRecord::Schema.define(version: 20140520095011) do
 
   create_table "accounts", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "appointments", force: true do |t|
+    t.integer  "physician_id"
+    t.integer  "patient_id"
+    t.datetime "appointment_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +46,12 @@ ActiveRecord::Schema.define(version: 20140519154359) do
   end
 
   add_index "blog_posts", ["user_id"], name: "index_blog_posts_on_user_id", using: :btree
+
+  create_table "brevets", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "campaigns", force: true do |t|
     t.string   "name"
@@ -75,6 +89,35 @@ ActiveRecord::Schema.define(version: 20140519154359) do
 
   add_index "grades", ["catgrade_id"], name: "index_grades_on_catgrade_id", using: :btree
 
+  create_table "joint2s", force: true do |t|
+    t.integer  "per_id"
+    t.integer  "brevet_id"
+    t.datetime "appointment_date"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "joints", force: true do |t|
+    t.integer  "per_id"
+    t.integer  "brevet_id"
+    t.datetime "appointment_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patients", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pers", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "personnees", force: true do |t|
     t.string   "name"
     t.integer  "fonctionn_id"
@@ -92,6 +135,12 @@ ActiveRecord::Schema.define(version: 20140519154359) do
   end
 
   add_index "personnes", ["fonction_id"], name: "index_personnes_on_fonction_id", using: :btree
+
+  create_table "physicians", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
